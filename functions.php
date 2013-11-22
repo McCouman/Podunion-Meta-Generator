@@ -125,23 +125,19 @@ include_once WP_CONTENT_DIR . '/PodUnion/MetaBox.php';
 #
 function post_type_mediafiles_admin() {
  		
- 		//globale vars 
- 		#global $user_level; //nur für leveling! 
- 		global $menu;
+ 	//globale vars 
+ 	#global $user_level; //nur für leveling! 
+ 	global $menu;
 	
 	//registriere Post Type members
-    	register_post_type ( 'magazin', array(
+	register_post_type ( 'magazin', array(
                     			'label' => __('Magazin'),
                     			'public' => true,
                     			'show_ui' => true,
-                    			'rewrite' => array(
-            		 			'slug' => 'pmb' 
-            		 					),
-                   				'supports' => array(
-                   					'title',
-                   					'revisions')
-                					)
-        				);
+                    			'rewrite' => array('slug' => 'pmb'),
+                   			'supports' => array('title', 'revisions')
+                			)
+        		);
 	
 }
 add_action('init', 'post_type_mediafiles_admin');
