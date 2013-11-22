@@ -52,7 +52,6 @@ $test8 =	$rico_hls = $podunion_magazin_hl_rico->the_meta();
 $test9 =	$torsten_hls = $podunion_magazin_hl_torsten->the_meta(); 
 $test10 =	$gasteins_hls = $podunion_magazin_hl_gasteins->the_meta(); 
 $test11 =	$magend = $podunion_magazin_ende->the_meta();
-	
 
 	//test
  	#echo '<pre>';
@@ -69,8 +68,6 @@ $test11 =	$magend = $podunion_magazin_ende->the_meta();
 		#print_r($test11); //HG END--
 	#echo '</pre>';
 
-
-	
 #############################################
 
 ///----------------------------Auphonic--------------------------------------------            
