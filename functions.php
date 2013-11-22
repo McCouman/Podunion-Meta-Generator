@@ -10,18 +10,6 @@ include_once WP_CONTENT_DIR . '/PodUnion/MetaBox.php';
 	}
 	if (is_admin()) add_action('admin_enqueue_scripts', 'metabox_style');
 
-	//----- Test
-	#
-	/*$custom_metabox = $podunion_magazin = new PodUnion_MetaBox(array (
-			'id' => '_podunion_magazin',
-			'types' => array('podunion'), //Tests for post (Podunion: mediafiles, podcaster)
-			'title' => 'Podunion Magazin',
-			'template' => get_stylesheet_directory() . '/box/podunion-magazin.php',
-	) );
-*/
-
-
-
 	//1----- Angaben zur Episode
 	#
 	$podunion_magazin_angaben = new PodUnion_MetaBox(array (
