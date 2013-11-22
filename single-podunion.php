@@ -23,13 +23,7 @@ echo '<article>
 <div id="primary" class="site-content">
 <div id="content" role="main">
 <div class="entry-content">
-
-			<?php while ( have_posts() ) : the_post(); ?>
-
-
-
-
-
+<?php while ( have_posts() ) : the_post(); ?>
 <?php
 	//my vars
 	#global $podunion_magazin;	
