@@ -130,14 +130,33 @@ function post_type_mediafiles_admin() {
  	global $menu;
 	
 	//registriere Post Type members
-	register_post_type ( 'magazin', array(
-                    			'label' => __('Magazin'),
-                    			'public' => true,
-                    			'show_ui' => true,
-                    			'rewrite' => array('slug' => 'pmb'),
-                   			'supports' => array('title', 'revisions')
-                			)
-        		);
+	register_post_type ( 'magazin', 
+		array (
+                 'label' => __('Magazin'),
+                    			
+                 //Noch hinzufügen! #23.November 2013
+                 'labels' => array (
+			'name' => __( 'Magazin' ),
+			'singular_name' => __( 'Magazin Podcast' ),
+			'add_new' => __( 'Erstelle Magazin' ),
+			'add_new_item' => __( 'Erstelle Magazin Episode' ),
+			'edit' => __( 'Bearbeiten' ),
+			'edit_item' => __( 'Bearbeiten Magazin Episode' ),
+			'new_item' => __( 'Neue Magazin Episode' ),
+			'view' => __( 'Magazin Episode Ansehen' ),
+			'view_item' => __( 'Magazin Episode Ansehen' ),
+			'search_items' => __( 'Suche durch Magazin Episodeen' ),
+			'not_found' => __( 'Keine Magazin Episodeen gefunden' ),
+			'not_found_in_trash' => __( 'Keine Magazin Episodeen im Löschung' ),
+			'parent' => __( 'Parent Magazin Podcast' ),
+		 ),
+                    			
+                  'public' => true,
+                  'show_ui' => true,
+                  'rewrite' => array('slug' => 'pmb'),
+                  'supports' => array('title', 'revisions')
+                )
+        );
 	
 }
 add_action('init', 'post_type_mediafiles_admin');
