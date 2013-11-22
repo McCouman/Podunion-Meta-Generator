@@ -129,8 +129,8 @@ function post_type_mediafiles_admin() {
  		#global $user_level; //nur für leveling! 
  		global $menu;
 	
-		//registriere Post Type members
-    	register_post_type ( 'podunion', array(
+	//registriere Post Type members
+    	register_post_type ( 'magazin', array(
                     			'label' => __('Magazin'),
                     			'public' => true,
                     			'show_ui' => true,
