@@ -102,7 +102,7 @@ include_once WP_CONTENT_DIR . '/PodUnion/MetaBox.php';
 	$podunion_magazin_hl_gasteins = new PodUnion_MetaBox(array (
 			'id' => '_podunion_magazin_hl_gasteins',
 			'types' => array('podunion'), //Tests for post (Podunion: mediafiles, podcaster)
-			'title' => '<img style="width:30px; border: 1px solid #999;" src="	http://0.gravatar.com/avatar/?s=300&d">
+			'title' => '<img style="width:30px; border: 1px solid #999;" src="http://0.gravatar.com/avatar/?s=300&d">
 						(5.f) Hightlights von Gast (1)',
 			'template' => get_stylesheet_directory() . '/box/magazin/highlights-gasteins.php',
 	) );
@@ -135,12 +135,12 @@ function post_type_mediafiles_admin() {
                     			'public' => true,
                     			'show_ui' => true,
                     			'rewrite' => array(
-            		 					'slug' => 'pmb' 
+            		 			'slug' => 'pmb' 
             		 					),
                    				'supports' => array(
-                   						 'title',
-                   						 'revisions')
-                						)
+                   					'title',
+                   					'revisions')
+                					)
         				);
 	
 }
