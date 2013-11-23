@@ -134,7 +134,7 @@ function post_type_mediafiles_admin() {
 		array (
                  'label' => __('Magazin'),
                     			
-                 //Noch hinzufügen! #23.November 2013
+                 //#23.November 2013
                  'labels' => array (
 			'name' => __( 'Magazin' ),
 			'singular_name' => __( 'Magazin Podcast' ),
@@ -150,10 +150,59 @@ function post_type_mediafiles_admin() {
 			'not_found_in_trash' => __( 'Keine Magazin Episodeen im Löschung' ),
 			'parent' => __( 'Parent Magazin Podcast' ),
 		 ),
-                    			
+                  'description' => __( 'Eine neue aufregende Podcast Episode des Magazin Podcasts von Podunion.com' ), 			
+
                   'public' => true,
-                  'show_ui' => true,
+		  'show_ui' => true,
+		  'publicly_queryable' => true,
+		  'exclude_from_search' => false,
+		  
+		  'menu_position' => 3, //position in Menu!
+		  'query_var' => true, //query_var argument allows you to control the query variable used to get posts of this type in podunion
+		  'menu_icon' => 'http://podunion.com/logo/Logo-Podcast-Magazin-50.png', //icon cover
+		  
+		  # Idea for members Plugin: Pleas Test!!!
+		  # http://wordpress.org/plugins/members/screenshots/
+		  
+		  // Global control over capabilities.
+		  'capability_type' => 'magazin-team',
+		  // Specific control over capabilities.
+		  'capabilities' => array(
+			'edit_post' => 'edit_magazin-team',
+			'edit_posts' => 'edit_magazin-team',
+			'edit_others_posts' => 'edit_others_magazin-team',
+			'publish_posts' => 'publish_magazin-team',
+			'read_post' => 'read_magazin-team',
+			'read_private_posts' => 'read_private_magazin-team',
+			'delete_post' => 'delete_magazin-team',
+		  ),
+		  
+		  
+		  
+		  //slug name:
                   'rewrite' => array('slug' => 'pmb'),
+                  
+                  //export ok!
+                  'can_export' => true,
+                  
+                  
+                  //page widgets:
+                  /*
+                  * Find mor infos to support widgets: :) M.C.
+                  *
+                  * - title: Text input field to create a post title.
+                  * - editor: Content input box for writing.
+                  * - comments: Ability to turn comments on/off.
+                  * - trackbacks: Ability to turn trackbacks and pingbacks on/off.
+                  * - revisions: Allows revisions to be made of your post.
+                  * - author: Displays a select box for changing the post author.
+                  * - excerpt: A textarea for writing a custom excerpt.
+                  * - thumbnail: The thumbnail (featured image in 3.0) uploading box.
+                  * - custom-fields: Custom fields input area.
+                  * - page-attributes:  The attributes box shown for pages. 
+                  *   			this is important for hierarchical post types, 
+                  *   			so you can select the parent post.
+                  */
                   'supports' => array('title', 'revisions')
                 )
         );
